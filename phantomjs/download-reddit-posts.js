@@ -9,9 +9,10 @@ function loadlinksFrom(file) {
 };
 
 function dumpTo(fileName, data, originURL) {
+	var template = fs.read("template.html");
 	data = data.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
-	data = "<html><head></head><body>" + data + "<div id=\"footer\">SOURCE URL: <a href=\"" + originURL + "\"> " + originURL + " </a></div></body><html>";
-	fs.write(fileName + ".html", data, 'w');
+	data = template.replace(/REPLACE-THIS-PART-WITH-CONTENT/g, data + "<div id=\"footer\">SOURCE URL: <a href=\"" + originURL + "\"> " + originURL + " </a></div>");
+	fs.write("..\\" + fileName + ".html", data, 'w');
 };
 
 var drp = {
@@ -96,8 +97,8 @@ var where_to_look = [	"http://old.reddit.com/user/localroger/submitted/",
 						"http://old.reddit.com/user/localroger/submitted/?count=75&after=t3_92owaa",
 						"http://old.reddit.com/user/localroger/submitted/?count=100&after=t3_7wogam"];
 
-processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
+//processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
 
 var URL_array = loadlinksFrom("LINKS_LIST.txt");
 
-//processListOfURLS(URL_array, drp.grabPostContent, drp.report, function() {return phantom.exit();});
+processListOfURLS(URL_array, drp.grabPostContent, drp.report, function() {return phantom.exit();});
