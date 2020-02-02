@@ -2,12 +2,12 @@
 
 var clickEvent = "ontouchstart" in window ? "touchend" : "click",
     classMethods = ["remove", "add"],
-    stringArray = [ "Add more contrast",
-                    "Remove additional contrast",
-                    "Night mode",
-                    "Regular mode",
-                    "Switch to Serif",
-                    "Return to Sans" ];
+    stringArray = [ "Добавить контраста",
+                    "Убрать контраст",
+                    "Ночной режим",
+                    "Обычный режим",
+                    "Добавить засечки",
+                    "Убрать засечки" ];
 
 function createControls() {
     var contrastDiv = document.createElement('div');
