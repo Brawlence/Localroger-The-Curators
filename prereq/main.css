@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: Open Sans, Arial;
+    font-family: 'Open Sans', sans-serif;
     color: #454545;
     font-size: 16px;
     margin: 2em auto;
@@ -13,16 +13,20 @@ body {
     text-align: justify
 }
 
+html.serif body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
+html.serif div#serif {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
 html.contrast body {
     color: #050505
-}
-
-html.contrast blockquote {
-    color: #11151a
-}
-
-html.contrast blockquote:before {
-    color: #262626
 }
 
 html.contrast a {
@@ -31,14 +35,6 @@ html.contrast a {
 
 html.contrast a:visited {
     color: #7d013e
-}
-
-html.contrast span.wr {
-    color: #800
-}
-
-html.contrast span.mfw {
-    color: #4d0000
 }
 
 html.inverted {
@@ -50,11 +46,11 @@ html.inverted body {
 }
 
 html.inverted div#contrast,
-html.inverted div#invmode {
+html.inverted div#invmode,
+html.inverted div#serif {
     color: #fff;
     background-color: #000
 }
-
 
 html.inverted a {
     color: #07a
@@ -62,14 +58,6 @@ html.inverted a {
 
 html.inverted a:visited {
     color: #ac5a82
-}
-
-html.inverted span.wr {
-    color: #c0392b
-}
-
-html.inverted span.mfw {
-    color: #8a0000
 }
 
 html.inverted.contrast {
@@ -81,7 +69,8 @@ html.inverted.contrast body {
 }
 
 html.inverted.contrast div#contrast,
-html.inverted.contrast div#invmode {
+html.inverted.contrast div#invmode,
+html.inverted.contrast div#serif {
     color: #fff;
     background-color: #000
 }
@@ -130,12 +119,20 @@ div#contrast {
     top: 10px
 }
 
+div#serif {
+    color: #000;
+    top: 34px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
 div#contrast,
-div#invmode {
+div#invmode,
+div#serif {
     cursor: pointer;
     position: absolute;
     right: 10px;
-    font-size: .8em;
     text-decoration: underline;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -147,6 +144,6 @@ div#invmode {
 div#invmode {
     color: #fff;
     background-color: #000;
-    top: 34px;
+    top: 56px;
     padding: 2px 5px
 }

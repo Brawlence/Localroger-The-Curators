@@ -5,7 +5,9 @@ var clickEvent = "ontouchstart" in window ? "touchend" : "click",
     stringArray = [ "Add more contrast",
                     "Remove additional contrast",
                     "Night mode",
-                    "Regular mode" ];
+                    "Regular mode",
+                    "Switch to Serif",
+                    "Return to Sans" ];
 
 function createControls() {
     var contrastDiv = document.createElement('div');
@@ -15,6 +17,12 @@ function createControls() {
     var nightmodeDiv = document.createElement('div');
         nightmodeDiv.id = "invmode";
         nightmodeDiv.innerText = stringArray[2];
+
+    var serifDiv = document.createElement('div');
+        serifDiv.id = "serif";
+        serifDiv.innerText = stringArray[4];
+
+    document.body.appendChild(serifDiv);
     document.body.appendChild(contrastDiv);
     document.body.appendChild(nightmodeDiv);
 }
@@ -35,6 +43,10 @@ function someControl(id, textArr, className) {
     );
 }
 
+function addSerifControl() {
+    someControl("serif", [stringArray[4], stringArray[5]], "serif");
+}
+
 function addContrastControl() {
     someControl("contrast", [stringArray[0], stringArray[1]],"contrast");
 }
@@ -44,6 +56,10 @@ function addInvertedControl() {
 }
 
 createControls();
+if (localStorage.getItem('serif')==='true') {
+    document.getElementById('serif').firstChild.data = stringArray[5];
+    document.getElementsByTagName("html")[0].classList.add("serif");
+}
 if (localStorage.getItem('invmode')==='true') {
     document.getElementById('invmode').firstChild.data = stringArray[3];
     document.getElementsByTagName("html")[0].classList.add("inverted");
@@ -54,3 +70,4 @@ if (localStorage.getItem('contrast')==='true') {
 }
 addContrastControl();
 addInvertedControl();
+addSerifControl();
