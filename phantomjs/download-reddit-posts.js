@@ -12,6 +12,7 @@ function loadlinksFrom(file) {
 function dumpTo(fileName, data, nav, originURL) {
 	var template = fs.read("template.html");
 	data = data.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
+	nav = nav.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
 	data = template.replace(/REPLACE-THIS-PART-WITH-CONTENT/g, data + nav + " <hr> <div id=\"footer\"> <a style=\"float:left;\"href=\"index.html\">[ INDEX ]</a> <a style=\"float:right;\"href=\"" + originURL + "\">[ SOURCE post on HFY ]</a></div>");
 	fs.write("..\\" + fileName + ".html", data, 'w');
 };
