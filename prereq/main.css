@@ -122,11 +122,10 @@ div#contrast {
 
 div#serif {
     color: #000;
-    top: 34px;
+    top: 32px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 19.1px;
     line-height: 1.28;
-    padding: 0.84em;
 }
 
 div#contrast,
