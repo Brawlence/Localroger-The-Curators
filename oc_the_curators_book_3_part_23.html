@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru" class="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="theme-color" content="#fefefe">
+    <title>The Curators</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Sci-Fi HFY soap opera by Roger Williams">
+    <link rel="stylesheet" type="text/css" href="./prereq/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./prereq/main.css">
+</head>
+
+<body>
+    <div class="md"><p><a href="oc_curators_book_3_part_1.html">First Episode</a> -- 
+<a href="oc_the_curators_book_3_part_22.html">Previous</a> --
+<a href="oc_the_curators_book_3_part_24.html">Next</a></p>
+
+<p>After the attack on Terminus I got to thinking about all those people who had implants who died anyway.  It was a given that we would never again make an implant that wasn't capable of interstellar range, and we would eventually make sure every living human old enough to learn to use one would have one.</p>
+
+<p>But I was still haunted by the seventy million people who died instantly, flash-incinerated by the immediate radiation of the blast on the hemisphere of Terminus facing the explosion.  If you carry around a machine that can sense interstellar destinations in real time and move you to them in nanoseconds, it seemed to make sense to me that that machine should be able to yank you out of the path of a wall of lethal radiation headed your way before it got to you.</p>
+
+<p>Unfortunately that led to another problem, because when humans created their version of the mortality Cure implants were a rare curiosity and so the doctors decided to adopt the Witnesses' approach to vacuum defense, allowing the victim of decompression to go unconscious but maximizing survival time in anticipation of rescue.  And our implants didn't have a lot of fancy AI to step in as Jay's implant had with his emulation.</p>
+
+<p>So I began to think about it and write code.  Detecting a blast that could kill you was not hard; a typical implant can form an emergency fold in a couple of nanoseconds, so the detection radius only had to be a few meters.  But that would be an essentially random fold into some convenient interplanetary or interstellar location.  The implant would then have to get the unconscious person it had saved back to some habitable place, preferably within half a day and within a couple of days at most.</p>
+
+<p>So I had written a lot of code to do the thinking for you, not a single line of which had ever been properly tested when Callie's implant yanked her away from the destruction of the Manufactory.</p>
+
+<p>And Callie's situation was worse than any case I had realisitically considered.  She was well outside the galaxy, far from any normal navigational beacon, but I had anticipated that something might happen in the midst of an intergalactic journey so it knew to fold toward the part of the nearest galaxy with the closest habitable worlds as quickly as possible without losing positional accuracy.</p>
+
+<p>Unfortunately, because of the wild ride out it <em>already</em> had positional error flags over a thousand light years wide.  It could get back to the Milky Way but would have hardly any idea just where it was when it got there.</p>
+
+<p>Implants don't have a lot of built-in navigational tools either.  The one thing they can detect well is fold activity, and there is a microfold protocol that amounts to a broadcast request for response; this is what the Prometheans used to join the microfold network.  The ping returns distance information but not direction.  But it also returns the Index of the world answering and, importantly since the implant doesn't carry a copy of the Index, its current galactic positional coordinates.  We had created a similar protocol at the Pinwheel and Callie's implant was compatible with both systems.</p>
+
+<p>So I wrote a routine that would issue a ping and collect the responses and interpolate position from the response ranges, much the same way GPS receivers used to determine position from the time of flight of the signals from different satellites.  Once it was near enough to the galactic plane this allowed the implant to figure out where it was to within about a light-year, and that allowed it to get close enough to a group of Indexed worlds that would provide better positional information with another ping and it then choose the closest world as its destination.</p>
+
+<p>CI:610220 was inhabited almost entirely by life forms with chitinous exoskeletons; vertebrates with endoskeletons had never evolved there.  That might have been an argument for picking a different target world but the implant didn't have access to that kind of information.</p>
+
+<p>At close range the implant could remote sense all the things you would normally use to resolve a landing, but without a human intelligence to guide it it couldn't do a very good job of making the final decision.  It chose the region where the microfold relay was located, as that was likely to be populated, and it could recognize buildings and bodies of water and excessively tall vegetation such as trees which might not be good things to land on.</p>
+
+<p>I had made at least one error in my coding though.  Because of the adventure by which it managed to approach CI:610220 Callie's implant had an exaggerated sense of its estimated positional error, and I had programmed it to drop the unconscious rescuee from a height safe from intersecting with a structure or individual.  I had anticipated that this error term might be a meter or so, but after an error rounding off the enormous total distance it had traveled the implant decided on twenty meters.</p>
+
+<p>All things considered, it was still something of a miracle after what happened at the Manufactory that she hit the ground going only fifteen meters per second.</p>
+
+<hr>
+
+<p>I was doing routine procedure reviews with Veronica and her people when her boss came to find me.  "We just got a curious message with direct priority routing from the Curators' microfold network," he said.  He showed me the readout.  It was a diagnostic ping that I had put in to make sure I would be informed if the emergency rescue system was ever activated.  The implant had completed its mission by hacking that message into the microfold traffic stream from CI:610220.</p>
+
+<p>"She might be alive," I said, and I folded out.</p>
+
+<p>The inhabitants of CI:610220 look ominously like what one might imagine the protagonist of Kafka's <em>The Metamorphosis</em> looked like at the conclusion of the story.  For what it's worth, they apparently find us pretty disgusting too.  I hailed an individual who was passing by their microfold comm center and asked it in Common if an alien like myself had arrived recently.</p>
+
+<p>"Oh, the one who fell from the sky," it said with rapid-fire clacking.  "It's over at the medical center."  It pointed, and I said thanks.</p>
+
+<p>The doctor came to meet me.  "I had never seen an actual endoskeletal life form before," it clacked.  "I did my best.  Some of its internal structural elements are damaged."</p>
+
+<p>"How did that happen?"</p>
+
+<p>"Fell from the sky.  We aren't sure from how high.  Probably would have given one of us a few cracks too."</p>
+
+<p>She was, perhaps fortunately, still unconscious.  "We are quite certain it is still alive but unsure how to revive it."</p>
+
+<p>"She was exposed to vacuum for some time," I said.  "Her defenses are still active.  They probably helped protect her organs from the fall."  I did a quick check.  The alien had splinted her broken arm and leg very skillfully.  "Nice work with the splint.  You could have been trained by one of our own."</p>
+
+<p>"Thank you.  It was an unexpected challenge.  I hope it makes a full recovery."</p>
+
+<p>"I need to take her home.  There is some hidden damage."</p>
+
+<p>"We know of the thorax-support elements that are damaged, but it was not clear how to treat them."</p>
+
+<p>"Our people have techniques for that."</p>
+
+<p>"Unfortunately there are no fold ships scheduled to be here any time soon.  We are very puzzled as to how it even got here."</p>
+
+<p>I nodded and prepared to violate every policy I had been taught for most of a million years.  "She got here like this," I said, and I picked her up carefully and folded out as six of them watched.</p>
+
+<p>Fuck those old secrets.</p>
+
+<p>A minute later, after several folds to intermediate Indexed worlds, I delivered her to the big hospital in Sydney which was the best facility nearest to her home.</p>
+
+<p>"She's unresponsive," the doctor said as he examined her.</p>
+
+<p>"She has the Cure, and has been exposed to vacuum for some time.  The defenses will abate within a few hours now that she's in a proper breathable atmosphere."</p>
+
+<p>They wrapped her broken ribs and scanned for the more subtle things the aliens hadn't known about and announced that she would have a bit of a convalescence but should make a full recovery, if she recovered from her vacuum-induced fugue.</p>
+
+<p>That happened about four hours later.  "Well this isn't what I pictured the afterlife looking like," she said.</p>
+
+<p>"No afterlife for you," I said.  "I'm tired of watching people die."</p>
+
+<p>"You wouldn't have had to watch.  I was way out in the halo."</p>
+
+<p>"Halo?"</p>
+
+<p>"The galactic halo."  She held up her hand and I received her transmission.  It wasn't as detailed as the report from a Curator implant would have been, but it told the tale.</p>
+
+<p>"A <em>neutron star</em>?" I said.</p>
+
+<p>"Threw their own trick back in their faces.  You know how much energy a cubic kilometer of neutronium contains?"</p>
+
+<p>I had to admit that I did not know that.</p>
+
+<p>"It's not just heavy, it's also insanely hot from the collapse energy of the parent star.  Ten to the thirty-fifth power joules.  Give or take an order of magnitude, it's an old neutron star and it depends a bit just <em>how</em> old.  Enough to blow up the planet in any case."</p>
+
+<p>The joule isn't a large unit of energy, but thirty-five is an exponent you rarely see in real world calculations that don't involve individual atoms.</p>
+
+<p>"I thought I was going to die.  Then I was naked in interstellar space.  Then here."</p>
+
+<p>"I wrote a rescue procedure into the implant code after Terminus," I said.</p>
+
+<p>"Damn, I was hoping to see it blow."</p>
+
+<p>"If it rescued you, you were nanoseconds from being fried.  It only scans out a few meters."</p>
+
+<p>"That's pretty funny but I think it would hurt if I let myself laugh."</p>
+
+<p>"I don't think it's funny.  And if you feel okay, now that I know what you did, I need to do something else to finish the job."</p>
+
+<p>"Say hi to the Curators for me."</p>
+
+<p>"Oh, I will <em>definitely</em> do that."</p>
+</div>
+<p><a href="oc_curators_book_3_part_1.html">First Episode</a> -- 
+<a href="oc_the_curators_book_3_part_22.html">Previous</a> --
+<a href="oc_the_curators_book_3_part_24.html">Next</a></p> <hr> <div id="footer"> <a style="float:left;"href="index.html">[ INDEX ]</a> <a style="float:right;"href="https://old.reddit.com/r/HFY/comments/encf53/oc_the_curators_book_3_part_23/">[ SOURCE post on HFY ]</a></div>
+
+    <script>
+        var scriptSrc = [
+            "./prereq/main_script.js",
+        ];
+        for (var j = 0; j < scriptSrc.length; j++) {
+            var index = scriptSrc[j];
+            var script = document.body.appendChild(document.createElement('script'));
+            script.async = false;
+            script.src = index;
+        }
+    </script>
+</body>
+
+</html>
