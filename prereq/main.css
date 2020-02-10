@@ -93,6 +93,10 @@ a:visited {
     color: #941352
 }
 
+a.notyet {
+    cursor: not-allowed;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

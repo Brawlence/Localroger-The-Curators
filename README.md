@@ -1,4 +1,4 @@
-# [Кураторы](https://brawlence.github.io/Localroger-The-Curators) (**RU** - [EN](https://github.com/Brawlence/Localroger-The-Curators/tree/english#the-curators))#
+# [Кураторы](https://brawlence.github.io/Localroger-The-Curators/) (**RU** - [EN](https://github.com/Brawlence/Localroger-The-Curators/tree/english#the-curators)) #
 **Кураторы** — это научно-фантастическая космическая "мыльная опера", изначально опубликованная **Роджером Вильямсом** для [сабреддита /r/HFY](https://reddit.com/r/HFY).
 
 [![codebeat badge](https://codebeat.co/badges/1f216180-c3c9-4589-a384-0ac536b7b74c)](https://codebeat.co/projects/github-com-brawlence-localroger-the-curators-master)
@@ -9,7 +9,7 @@
 
 ## Правки и предложения ##
 
-О любые предложениях по стилистике, найденных ошибках в переводе с английского на русский, неточностях в переносе или обновлении постов reddit можно сообщив, открыв [вопрос](https://github.com/Brawlence/Localroger-The-Curators/issues) или создав [пулл-реквест](https://github.com/Brawlence/Localroger-The-Curators/pulls).
+О любыех предложениях по стилистике, найденных ошибках в переводе с английского на русский, неточностях в переносе или обновлении постов reddit можно сообщить, открыв [вопрос](https://github.com/Brawlence/Localroger-The-Curators/issues) или создав [пулл-реквест](https://github.com/Brawlence/Localroger-The-Curators/pulls).
 
 ## Благодарности ##
 
