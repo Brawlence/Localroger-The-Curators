@@ -5,14 +5,14 @@ var content = fs.read('LINKS_LIST.txt');
 console.log("File loaded");
 var pepega = content.split("\n");
 var template = fs.read("template.html");
-var data = "<H1> The Curators </H1> <hr> <h2>Book 1</h2>";
+var data = "<H1> The Curators </H1> <hr>\n\t<h2>Book 1</h2>\n\t";
 var book = 2;
 for (var i_2 = pepega.length-1; i_2 >= 0; i_2--) { 
 		var splotted = pepega[i_2].split('/');
 		var name = splotted[splotted.length-2];
         name = name.replace(/(oc_)?(the_)?curators_/g, '');
-        if (name.indexOf("book_"+book) > -1) data = data + "<h2>Book " + book++ +"</h2>";
-		data = data + " <a href=\"" + pepega[i_2] + "\">" + name.replace(/book_[\d]_/g, '') + "</a>  ";
+        if (name.indexOf("book_"+book) > -1) data = data + "\n\t<h2>Book " + book++ +"</h2>\n\t";
+		data = data + " <a href=\"" + pepega[i_2].replace(/[\r\n\t]/g, '') + "\">" + name.replace(/book_[\d]_/g, '') + "</a>  ";
         data = data.replace(/   /g, ' • ');
 		console.log("added " + i_2);
 };
