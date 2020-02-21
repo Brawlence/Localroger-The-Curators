@@ -5,7 +5,7 @@ var content = fs.read('LINKS_LIST.txt');
 console.log("File loaded");
 var pepega = content.split("\n");
 var template = fs.read("template.html");
-var data = "<H1> Кураторы </H1> <hr>\n\t<h2>Книга 1</h2>\n\t";
+var data = "<H1> Кураторы </H1> <hr />\n\t<h2>Книга 1</h2>\n\t";
 var book = 2;
 for (var i_2 = pepega.length-1; i_2 >= 0; i_2--) { 
 		var splotted = pepega[i_2].split('/');
@@ -17,6 +17,6 @@ for (var i_2 = pepega.length-1; i_2 >= 0; i_2--) {
 		console.log("added " + i_2);
 };
 data = data.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
-data = template.replace(/REPLACE-THIS-PART-WITH-CONTENT/g, data + "<hr> Научно-фантастическая повесть в жанре HFY от <a href=\"https://reddit.com/u/localroger/\">Роджера Уильямса</a>");
+data = template.replace(/REPLACE-THIS-PART-WITH-CONTENT/g, data + "<hr /> Научно-фантастическая повесть в жанре HFY от <a href=\"https://reddit.com/u/localroger/\">Роджера Уильямса</a>");
 fs.write("../index.html", data, 'a');
 phantom.exit();
