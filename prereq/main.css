@@ -133,7 +133,8 @@ div#serif {
 
 div#contrast,
 div#invmode,
-div#serif {
+div#serif,
+div#name {
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -150,4 +151,12 @@ div#invmode {
     background-color: #000;
     top: 56px;
     padding: 2px 5px
+}
+
+html span.n {
+    font-weight: bold
+}
+
+html.no-bold span.n {
+    font-weight: unset;
 }
