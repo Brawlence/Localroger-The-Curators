@@ -25,7 +25,7 @@ function createControls() {
         serifDiv.innerText = stringArray[4];
 
     var nameDiv = document.createElement('div');
-        nameDiv.id = "name";
+        nameDiv.id = "namesbold";
         nameDiv.innerText = stringArray[6];
 
     document.body.appendChild(serifDiv);
@@ -63,7 +63,7 @@ function addInvertedControl() {
 }
 
 function addNameControl() {
-    someControl("name", [stringArray[6], stringArray[7]], "no-bold");
+    someControl("namesbold", [stringArray[6], stringArray[7]], "no-bold");
 }
 
 createControls();

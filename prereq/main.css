@@ -134,7 +134,7 @@ div#serif {
 div#contrast,
 div#invmode,
 div#serif,
-div#name {
+div#namesbold {
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -151,6 +151,10 @@ div#invmode {
     background-color: #000;
     top: 56px;
     padding: 2px 5px
+}
+
+div#namesbold {
+    display: none;
 }
 
 html span.n {
