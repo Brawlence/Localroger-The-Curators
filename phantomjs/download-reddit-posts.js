@@ -9,6 +9,9 @@ function loadlinksFrom(file) {
 	return array;
 };
 
+// TODO: replace -- with  •  in navigation;
+// TODO: <div class="md"><p> → <div class="md">/n<p>
+// TODO: factorize all the language-specific strings out of code (and into the template?)
 function dumpTo(fileName, data, nav, originURL) {
 	var template = fs.read("template.html");
 	data = data + nav;
