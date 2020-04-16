@@ -1,5 +1,12 @@
 "use strict";
 
+// localization strings
+var	loc_HTML_lang = "ru",
+	loc_HTML_desc = "Фанатский перевод научно-фантастической саги The Curators Роджера Вильямса",
+	loc_title = "Кураторы",
+	loc_index = "ОГЛАВЛЕНИЕ",
+	loc_source = "пост-ИСТОЧНИК на HFY";
+
 var fs = require('fs');
 
 function loadlinksFrom(file) {
@@ -9,15 +16,17 @@ function loadlinksFrom(file) {
 	return array;
 };
 
-// TODO: replace -- with  •  in navigation;
-// TODO: <div class="md"><p> → <div class="md">/n<p>
-// TODO: factorize all the language-specific strings out of code (and into the template?)
 function dumpTo(fileName, data, nav, originURL) {
-	var template = fs.read("template.html");
-	data = data + nav;
+	// read and localize the template
+	var template = fs.read("template.html"); 
+	template = template.replace(/\$lang/g, loc_HTML_lang);
+	template = template.replace(/\$title/g, loc_title);
+	template = template.replace(/\$description/g, loc_HTML_desc);
+
+	data = nav + "\n" +  data + nav;
 	data = data.replace(/\<hr\>/g,'<hr />');
 	data = data.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
-	data = template.replace(/REPLACE-THIS-PART-WITH-CONTENT/g, data + "\n<hr />\n<div id=\"footer\">\n\t<a style=\"float:left;\"href=\"index.html\">[ ОГЛАВЛЕНИЕ ]</a>\n\t<a style=\"float:right;\"href=\"" + originURL + "\">[ пост-ИСТОЧНИК на HFY ]</a>\n</div>");
+	data = template.replace(/\$content/g, data + "\n<hr />\n<div id=\"footer\">\n\t<a style=\"float:left;\"href=\"index.html\">[ " + loc_index + " ]</a>\n\t<a style=\"float:right;\"href=\"" + originURL + "\">[ " + loc_source + " ]</a>\n</div>");
 	fs.write("..\\" + fileName + ".html", data, 'w');
 };
 
@@ -51,8 +60,9 @@ var drp = {
 
 	grabPostContent: function(page) {
 		var originURL =  page.evaluateJavaScript('function(){return document.URL;}');
-		var HTMLcontent = page.evaluateJavaScript('function(){return document.querySelector(\'div.expando div.usertext-body\').innerHTML;}');
 		var navParagraph = page.evaluateJavaScript('function(){return document.querySelector(\'div.expando div.usertext-body p a\').parentElement.outerHTML}');
+		navParagraph = navParagraph.replace(/\-\-/g, '•');
+		var HTMLcontent = page.evaluateJavaScript('function(){document.querySelector(\'div.expando div.usertext-body p a\').parentElement.remove(); return document.querySelector(\'div.expando div.usertext-body\').innerHTML;}');
 		var splotted = originURL.split('/');
 		var name = splotted[splotted.length-2];
 		dumpTo(name, HTMLcontent, navParagraph, originURL);			
@@ -98,11 +108,12 @@ function processListOfURLS (urls, actionsToDo, callbackPerUrl, callbackFinal) {
     return retrieve();
 };
 
-var where_to_look = [	"http://old.reddit.com/user/localroger/submitted/", 
-						"http://old.reddit.com/user/localroger/submitted/?count=25&after=t3_comens", 
-						"http://old.reddit.com/user/localroger/submitted/?count=50&after=t3_aowl0k", 
-						"http://old.reddit.com/user/localroger/submitted/?count=75&after=t3_92owaa",
-						"http://old.reddit.com/user/localroger/submitted/?count=100&after=t3_7wogam"];
+var where_to_look = [	"https://old.reddit.com/user/localroger/submitted/", 
+						"https://old.reddit.com/user/localroger/submitted/?count=25&after=t3_dnjbdx", 
+						"https://old.reddit.com/user/localroger/submitted/?count=50&after=t3_bffw84", 
+						"https://old.reddit.com/user/localroger/submitted/?count=75&after=t3_9nx0li",
+						"https://old.reddit.com/user/localroger/submitted/?count=100&after=t3_8fmaqj",
+						"https://old.reddit.com/user/localroger/submitted/?count=125&after=t3_7dt7uy"];
 
 //processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
 
