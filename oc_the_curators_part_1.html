@@ -12,11 +12,10 @@
 </head>
 
 <body>
-<div class="md">
 <p><em>Для тех, кто знакомы с моими предыдущими работами: эта авторская история будет написана в форме серийной повести для сабреддита HFY.</em></p>
-
 <p><a class="notyet" title="Перевод ещё не готов." href="oc_the_curators_book_2_part_1.html">Книга 2</a> •
 <a href="oc_the_curators_part_2.html">Следующий эпизод</a></p>
+<div class="md">
 
 <p>Прошло три года с момента появления свёртколёта в нашем небе, и я удивился, обнаружив одного из наших инопланетных гостей в своём списке на приём. Пришельцы могли путешествовать между звёздами, но были ограничены в движении между кораблём на орбите и поверхностью Земли; поэтому для обеспечения челночного обмена мы привезли стыковочное кольцо и с их помощью закрепили на корабле. Там жили тысячи индивидов — нескольких рас, из разных звёздных систем — но на деле лишь толика побывала на поверхности Земли; сейчас один из них сидел за моим столом, а я и понятия не имел, почему.</p>
 
@@ -92,12 +91,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

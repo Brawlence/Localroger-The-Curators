@@ -12,10 +12,10 @@
 </head>
 
 <body>
-<div class="md">
 <p><a href="oc_the_curators_part_1.html">Первый эпизод</a> • 
 <a href="oc_the_curators_part_5.html">Предыдущий</a> • 
 <a href="oc_the_curators_part_7.html">Следующий</a></p>
+<div class="md">
 
 <p>Хоть <span class="n">К</span> и перестало отвечать на мои звонки после крайней нашей встречи, я достаточно сдружился с директором севильской нанитной лаборатории, взявшим на себя обязанность устроить мне доскональную экскурсию по своему ремеслу, пока я ждал планового возвращения свертколёта с Земли.</p>
 
@@ -166,12 +166,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

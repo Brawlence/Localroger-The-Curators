@@ -12,10 +12,10 @@
 </head>
 
 <body>
-<div class="md">
 <p><a href="oc_the_curators_part_1.html">Первый эпизод</a> • 
 <a href="oc_the_curators_part_6.html">Предыдущий</a> • 
 <a href="oc_the_curators_part_8.html">Следующий</a></p>
+<div class="md">
 
 <p>Карабкаясь вниз с бывшей когда-то самолётом штуки, я был поражён осознанием: это звездолёт, построенный человечеством и принадлежащий человечеству звездолёт — и мы только что без посторонней помощи посетили на нём целый мир на орбите чужой звезды. Серьёзных усилий по косметическому тюнингу не было: он был всё того же полу-камуфляжного оливкового цвета, в который любят красить дозвуковые боевые машины без новых сочных стелс-примочек. Я осознал, что проект корабля свёртки, вероятно, вытащил его со свалки.</p>
 
@@ -164,12 +164,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

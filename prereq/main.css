@@ -134,7 +134,8 @@ div#serif {
 div#contrast,
 div#invmode,
 div#serif,
-div#namesbold {
+div#namesbold,
+div#md {
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -163,4 +164,8 @@ html span.n {
 
 html.no-bold span.n {
     font-weight: unset;
+}
+
+div#md img {
+    height: 1em
 }

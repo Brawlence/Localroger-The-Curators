@@ -24,13 +24,12 @@
 	<a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 1</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 2</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 3</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 4</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 5</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 6</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 7</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 8</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 9</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 10</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 11</a> • <a class="notyet" title="Перевод ещё не готов." href="index.html">Часть 12</a>  <hr />Научно-фантастическая повесть в жанре HFY от <a href="https://reddit.com/u/localroger/">Роджера Уильямса</a>
     <script>
         var scriptSrc = [
-            "./prereq/main_script.js",
+            "./prereq/main_script.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

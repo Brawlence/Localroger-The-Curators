@@ -12,10 +12,10 @@
 </head>
 
 <body>
-<div class="md">
 <p><a href="oc_the_curators_part_1.html">Первый эпизод</a> • 
 <a href="oc_the_curators_part_7.html">Предыдущий</a> • 
 <a class="notyet" title="Перевод ещё не готов." href="oc_the_curators_part_9.html">Следующий</a></p>
+<div class="md">
 
 <p>Никогда не увлекался ночёвками в палатке, но <span class="n">Эм</span> было нужно отвезти геолога на задание на другой планете, а наш новый звездолёт прибывал через день. Я проснулся от гула турбовинтовых двигателей С-130. Пнув включатель батареи светодиодных посадочных огней, я успел выбрался из палатки как раз, чтобы застать ряд расцветших парашютов в утреннем небе.</p>
 
@@ -90,12 +90,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

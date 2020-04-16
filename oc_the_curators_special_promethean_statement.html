@@ -12,10 +12,10 @@
 </head>
 
 <body>
-<div class="md">
-<p><a href="oc_curators_book_3_part_1.html">Первый эпизод</a> -- 
-<a href="oc_the_curators_book_3_part_13.html">Предыдущий</a> --
+<p><a href="oc_curators_book_3_part_1.html">Первый эпизод</a> • 
+<a href="oc_the_curators_book_3_part_13.html">Предыдущий</a> • 
 <a href="oc_the_curators_book_3_part_14.html">Следующий</a></p>
+<div class="md">
 
 <p><em>По просьбам публики, прелюдия к Книге 3: Части 13</em></p>
 
@@ -243,8 +243,8 @@ can make that kind of update remotely."</p>
 
 <p>He handed me the printout and said, "On my authority, do it anyway."</p>
 </div>
-<p><a href="oc_curators_book_3_part_1.html">Первый эпизод</a> -- 
-<a href="oc_the_curators_book_3_part_13.html">Предыдущий</a> --
+<p><a href="oc_curators_book_3_part_1.html">Первый эпизод</a> • 
+<a href="oc_the_curators_book_3_part_13.html">Предыдущий</a> • 
 <a href="oc_the_curators_book_3_part_14.html">Следующий</a></p> <hr />
 <div id="footer">
     <a style="float:left;"href="index.html">[ ОГЛАВЛЕНИЕ ]</a>
@@ -253,12 +253,12 @@ can make that kind of update remotely."</p>
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

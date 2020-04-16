@@ -12,9 +12,9 @@
 </head>
 
 <body>
-<div class="md">
 <p><a href="oc_the_curators_part_1.html">Первый эпизод</a> •
 <a href="oc_the_curators_part_3.html">Следующий</a></p>
+<div class="md">
 
 <p>Решив изучать дерматологию, я и не мечтал, что это сделает меня космонавтом, не говоря уж о посещении настоящих пришельцев на их звездолёте. Но теперь в окне моего персонального шаттла свёртколёт рос ближе и ближе, больше и больше; наконец, когда я заметил данное людьми стыковочное кольцо, оно было похоже на обручальное, сгинувшее на склоне горы.</p>
 
@@ -102,12 +102,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>
