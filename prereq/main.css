@@ -92,6 +92,10 @@ a:visited {
     color: #941352
 }
 
+a.notyet {
+    cursor: not-allowed;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -129,7 +133,9 @@ div#serif {
 
 div#contrast,
 div#invmode,
-div#serif {
+div#serif,
+div#namesbold,
+div#md {
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -146,4 +152,20 @@ div#invmode {
     background-color: #000;
     top: 56px;
     padding: 2px 5px
+}
+
+div#namesbold {
+    display: none;
+}
+
+html span.n {
+    font-weight: bold
+}
+
+html.no-bold span.n {
+    font-weight: unset;
+}
+
+div#md img {
+    height: 1em
 }

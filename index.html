@@ -23,13 +23,12 @@
 	 <a href="oc_the_curators_book_4_part_1.html">part_1</a> • <a href="oc_the_curators_book_4_part_2.html">part_2</a> • <a href="oc_the_curators_book_4_part_3.html">part_3</a> • <a href="oc_the_curators_book_4_part_4.html">part_4</a> • <a href="oc_the_curators_book_4_part_5.html">part_5</a>  <hr /> A Sci-Fi HFY story by <a href="https://reddit.com/u/localroger/">Roger Williams</a>
     <script>
         var scriptSrc = [
-            "./prereq/main_script.js",
+            "./prereq/main_script.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>

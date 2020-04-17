@@ -7,7 +7,9 @@ var clickEvent = "ontouchstart" in window ? "touchend" : "click",
                     "Night mode",
                     "Regular mode",
                     "Switch to Serif",
-                    "Return to Sans" ];
+                    "Return to Sans",
+                    "Names in Bold",
+                    "Normal Names" ];
 
 function createControls() {
     var contrastDiv = document.createElement('div');
@@ -22,9 +24,14 @@ function createControls() {
         serifDiv.id = "serif";
         serifDiv.innerText = stringArray[4];
 
+    var nameDiv = document.createElement('div');
+        nameDiv.id = "namesbold";
+        nameDiv.innerText = stringArray[6];
+
     document.body.appendChild(serifDiv);
     document.body.appendChild(contrastDiv);
     document.body.appendChild(nightmodeDiv);
+    document.body.appendChild(nameDiv);
 }
 
 function someControl(id, textArr, className) {
@@ -43,19 +50,27 @@ function someControl(id, textArr, className) {
     );
 }
 
-function addSerifControl() {
-    someControl("serif", [stringArray[4], stringArray[5]], "serif");
-}
-
 function addContrastControl() {
     someControl("contrast", [stringArray[0], stringArray[1]],"contrast");
+}
+
+function addSerifControl() {
+    someControl("serif", [stringArray[4], stringArray[5]], "serif");
 }
 
 function addInvertedControl() {
     someControl("invmode", [stringArray[2], stringArray[3]], "inverted");
 }
 
+function addNameControl() {
+    someControl("namesbold", [stringArray[6], stringArray[7]], "no-bold");
+}
+
 createControls();
+if (localStorage.getItem('no-bold')==='true') {
+    document.getElementById('no-bold').firstChild.data = stringArray[7];
+    document.getElementsByTagName("html")[0].classList.add("no-bold");
+}
 if (localStorage.getItem('serif')==='true') {
     document.getElementById('serif').firstChild.data = stringArray[5];
     document.getElementsByTagName("html")[0].classList.add("serif");
@@ -71,3 +86,4 @@ if (localStorage.getItem('contrast')==='true') {
 addContrastControl();
 addInvertedControl();
 addSerifControl();
+addNameControl();

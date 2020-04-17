@@ -114,12 +114,12 @@
     <script>
         var scriptSrc = [
             "./prereq/main_script.js",
+            "./prereq/converter.js"
         ];
-        for (var j = 0; j < scriptSrc.length; j++) {
-            var index = scriptSrc[j];
-            var script = document.body.appendChild(document.createElement('script'));
-            script.async = false;
-            script.src = index;
+        for (let script of scriptSrc) {
+            var scriptObj = document.body.appendChild(document.createElement('script'));
+            scriptObj.async = false;
+            scriptObj.src = script;
         }
     </script>
 </body>
