@@ -137,7 +137,7 @@ div#serif,
 div#namesbold,
 div#md {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 10px;
     text-decoration: underline;
     -webkit-touch-callout: none;
@@ -158,6 +158,10 @@ div#namesbold {
     display: none;
 }
 
+div#md {
+    bottom: 10px;
+}
+
 html span.n {
     font-weight: bold
 }
@@ -168,4 +172,17 @@ html.no-bold span.n {
 
 div#md img {
     height: 1em
+}
+
+@media screen and (max-width:1200px) {
+    div#contrast,
+    div#invmode,
+    div#serif {
+        position: absolute;
+    }
+    div#md {
+        position: unset;
+        margin-right: 10px;
+        float: right
+    }
 }
