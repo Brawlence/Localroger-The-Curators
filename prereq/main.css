@@ -158,6 +158,10 @@ div#namesbold {
     display: none;
 }
 
+html.inverted img.bw{
+    filter: invert(1);
+}
+
 div#md {
     bottom: 10px;
 }

@@ -3,7 +3,7 @@
 function createMDControl() {
     var mdDiv = document.createElement('div');
         mdDiv.id = "md";
-        mdDiv.innerHTML = "<img src=\"./prereq/md-logo.svg\" onclick=\"copyMarkdownText();\" title=\"Cкопировать текст в Markdown\"></img>";
+        mdDiv.innerHTML = "<img src=\"./prereq/md-logo.svg\" class=\"bw\" onclick=\"copyMarkdownText();\" title=\"Copy in Markdown\"></img>";
     document.body.appendChild(mdDiv);
 };
 
