@@ -14,5 +14,6 @@
 ## Благодарности ##
 
 * [Роджеру Вильямсу](http://localroger.com/) и его чрезвычайно удовлетворительным произведениям. Поддержите автора на [Smashwords](https://www.smashwords.com/books/view/836390) 
+* Сервисам [ГлавРед](https://glvrd.ru/) и [TheRules.Ru](https://therules.ru/) за подспорье в выверении слога
 * [thebestmotherfuckingwebsite](https://github.com/denysvitali/thebestmotherfuckingwebsite) - шаблон веб-страниц сделан из их сайта
 * [phantomjs](https://github.com/ariya/phantomjs)
