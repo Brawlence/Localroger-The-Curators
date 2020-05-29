@@ -17,6 +17,8 @@ function copyMarkdownText() {
         text = text.replace(/\<span class=\"n\"\>/g, '**');
         text = text.replace(/\<\/span\>/g, '**');
 
+        text = "[Первый эпизод] • [Предыдущий] • Следующий  \n\n" + text + "[Первый эпизод] • [Предыдущий] • Следующий  \n\n***\n\n[Зеркало на GitHub] • [Оригинал на r/HFY]\n\n[Зеркало на GitHub]: https://brawlence.github.io/Localroger-The-Curators/\n[Оригинал на r/HFY]:\n\n[Первый эпизод]: \n[Предыдущий]: \n";
+
 		const elderMagicField = document.createElement('textarea');
 			elderMagicField.id = "elderMagicField";
 			elderMagicField.style = "top: 5%; left: 5%; height: 90%; width: 90%; position: fixed; z-index: 255;  border-width: 3px; border-style: solid; border-color: black;";
