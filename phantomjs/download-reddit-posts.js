@@ -115,7 +115,10 @@ var where_to_look = [	"https://old.reddit.com/user/localroger/submitted/",
 						"https://old.reddit.com/user/localroger/submitted/?count=100&after=t3_8fmaqj",
 						"https://old.reddit.com/user/localroger/submitted/?count=125&after=t3_7dt7uy"];
 
-//processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
+// Easier to just run
+// for (link of document.querySelectorAll('div#siteTable a.title')) console.log(link.href)
+// on each page of https://old.reddit.com/user/localroger/submitted/ and add it to LINKS_LIST.txt
+// //processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
 
 var URL_array = loadlinksFrom("LINKS_LIST.txt");
 
