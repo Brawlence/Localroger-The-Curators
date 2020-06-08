@@ -158,10 +158,6 @@ div#namesbold {
     display: none;
 }
 
-html.inverted img.bw{
-    filter: invert(1);
-}
-
 div#md {
     bottom: 10px;
 }
@@ -172,6 +168,10 @@ html span.n {
 
 html.no-bold span.n {
     font-weight: unset;
+}
+
+html.inverted img.bw{
+    filter: invert(1);
 }
 
 div#md img {
