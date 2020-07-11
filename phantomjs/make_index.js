@@ -6,6 +6,7 @@ var	loc_HTML_lang = "en",
 	loc_title = "The Curators",
 	loc_book = "Book",
 	loc_part = "Part",
+	loc_coda = "Coda",
 	loc_missing = "Chapter is present on Reddit but missing local-side.",
 	loc_desc = "A Sci-Fi HFY story by",
 	loc_authorName = "Roger Williams";
@@ -40,10 +41,12 @@ for (var i_2 = links_array.length-1; i_2 >= 0; i_2--) { // phantomJS — somewhy
 
 		// add a subdivision if next book is encountered
 		if (name.indexOf("book_"+book) > -1) data = data + "\n\t<h2>" + loc_book + " " + book++ +"</h2>\n\t";
+		if ((name.indexOf("coda") > -1)&&(book++ == 5)) data = data + "\n\t<h2>" + loc_coda + "</h2>\n\t";
 
 		// clean and localize the name
-		name = name.replace(/(oc_)?(the_)?curators_(book_[\d]_)?/g, '');
+		name = name.replace(/(oc_)?(the_)?curators_((book_[\d]_)|coda_)?/g, '');
 		name = name.replace(/part_([\d][\d]?)/g, loc_part + ' $1');
+		if (name[0].match(/[a-z]/)) {name = name[0].toUpperCase() + name.substr(1)}; // Convert first character to uppercase
 
 		// clean and convert the link to local file instead of reddit post
 		link = link.replace(/[\r\n\t]/g, '');
