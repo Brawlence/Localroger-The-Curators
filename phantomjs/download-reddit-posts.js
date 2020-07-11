@@ -24,8 +24,8 @@ function dumpTo(fileName, data, nav, originURL) {
 	template = template.replace(/\$description/g, loc_HTML_desc);
 
 	data = nav + "\n" +  data + nav;
-	data = data.replace(/\<hr\>/g,'<hr />');
-	data = data.replace(/(http[s]?\:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\//g,'$2.html');
+	data = data.replace(/\<(b|h)r\>/g,'<$1r />');  // replace line and horizontal breaks with correct form (<br />)
+	data = data.replace(/(https?:\/\/[\w]{3}\.reddit\.com\/r\/HFY\/comments\/.{6}\/)([\w]+)\/?/g,'$2.html'); // replace global links to local links
 	data = template.replace(/\$content/g, data + "\n<hr />\n<div id=\"footer\">\n\t<a style=\"float:left;\"href=\"index.html\">[ " + loc_index + " ]</a>\n\t<a style=\"float:right;\"href=\"" + originURL + "\">[ " + loc_source + " ]</a>\n</div>");
 	fs.write("..\\" + fileName + ".html", data, 'w');
 };
@@ -116,7 +116,7 @@ var where_to_look = [	"https://old.reddit.com/user/localroger/submitted/",
 						"https://old.reddit.com/user/localroger/submitted/?count=125&after=t3_7dt7uy"];
 
 // Легче просто запустить
-// for (link of document.querySelectorAll('div#siteTable a.title')) console.log(link.href)
+// var str = ""; for (link of document.querySelectorAll('div#siteTable a.title')) str += link.href + "\n"
 // на каждой странице https://old.reddit.com/user/localroger/submitted/ и вставить в LINKS_LIST.txt
 // //processListOfURLS(where_to_look, drp.fetchLinks, drp.report, function() {return console.log("completed link fetching");});
 
