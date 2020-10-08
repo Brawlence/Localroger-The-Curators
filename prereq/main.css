@@ -8,9 +8,18 @@ body {
     font-size: 16px;
     margin: 48px auto;
     max-width: 800px;
-    padding: 16px;
     line-height: 1.6;
     text-align: justify
+}
+
+@media screen and (max-width:832px) {
+    body {
+        padding: 16px
+    }
+}
+
+p {
+    text-indent: 5ch;
 }
 
 html.serif body {
@@ -93,29 +102,8 @@ a:visited {
 }
 
 a.notyet {
-    cursor: not-allowed;
-}
-
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-}
-
-small {
-    font-size: .4em
-}
-
-p.st {
-    margin-top: -1em
-}
-
-@media screen and (max-width:500px) {
-    body {
-        text-align: left
-    }
+    opacity: 35%;
+    cursor: not-allowed
 }
 
 div#contrast {
@@ -140,6 +128,7 @@ div#md {
     position: fixed;
     right: 10px;
     text-decoration: underline;
+    text-decoration-style: dotted;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
