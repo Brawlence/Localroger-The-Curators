@@ -5,7 +5,7 @@
 
 ## Description ##
 
-This project aims to provide series' ongoing translation into Russian. For archival purposes, [phantomjs](https://github.com/ariya/phantomjs) script `download-reddit-posts.js` can be found in `phantomjs` directory. Once ran, it makes a list of links containing 'Curators' from /u/localroger/submitted. These links are then processed (by inserting the content of the post into template.hmtl).
+This project aims to provide series' ongoing translation into Russian. For archival purposes, [SlimerJS](https://slimerjs.org/) script `download-reddit-posts.js` can be found in `SlimerJS` directory. Once ran, it makes a list of links containing 'Curators' from /u/localroger/submitted. These links are then processed (by inserting the content of the post into template.hmtl).
 
 ## Edits and Suggestions ##
 
@@ -15,4 +15,4 @@ Any suggestions, discovered errors in trascribing or post updates on reddit can 
 
 * [Roger Williams](http://localroger.com/) and his immensely enjoyable writings. Support the author on [Smashwords](https://www.smashwords.com/books/view/836390) 
 * [thebestmotherfuckingwebsite](https://github.com/denysvitali/thebestmotherfuckingwebsite) - the template is derived from theirs
-* [phantomjs](https://github.com/ariya/phantomjs)
+* [SlimerJS](https://github.com/laurentj/slimerjs), which supersedes [phantomjs](https://github.com/ariya/phantomjs)
