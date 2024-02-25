@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 // localization strings
 var	loc_HTML_lang = "en",
@@ -58,15 +58,33 @@ var drp = {
 		}
 	},
 
-	grabPostContent: function(page) {
-		var originURL =  page.evaluateJavaScript('function(){return document.URL;}');
-		var navParagraph = page.evaluateJavaScript('function(){return document.querySelector(\'div.expando div.usertext-body p a\').parentElement.outerHTML}');
-		navParagraph = navParagraph.replace(/\-\-/g, '•');
-		var HTMLcontent = page.evaluateJavaScript('function(){document.querySelector(\'div.expando div.usertext-body p a\').parentElement.remove(); return document.querySelector(\'div.expando div.usertext-body\').innerHTML;}');
-		var splotted = originURL.split('/');
+	grabPostContent: function (page) {
+		// Directly execute the code to extract the necessary information
+		var result = page.evaluate(function() {
+			var originURL = document.URL;
+
+			// Extract the navigation paragraph
+			var navParagraph = document.querySelector('div.expando div.usertext-body p a').parentElement.outerHTML;
+			navParagraph = navParagraph.replace(/\-\-/g, '•');
+
+			// Extract the HTML content, removing the navigation paragraph
+			var HTMLcontent = document.querySelector('div.expando div.usertext-body').innerHTML;
+			document.querySelector('div.expando div.usertext-body p a').parentElement.remove();
+
+			// Return the extracted information
+			return {
+				originURL: originURL,
+				navParagraph: navParagraph,
+				HTMLcontent: HTMLcontent
+			};
+		});
+
+		// Use the extracted information
+		var splotted = result.originURL.split('/');
 		var name = splotted[splotted.length-2];
-		dumpTo(name, HTMLcontent, navParagraph, originURL);			
+		dumpTo(name, result.HTMLcontent, result.navParagraph, result.originURL);
 	}
+
 };
 
 /*
