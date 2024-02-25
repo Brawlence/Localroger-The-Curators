@@ -5,7 +5,7 @@
 
 ## Описание ##
 
-Цель проекта — сделать постоянно обновляющийся перевод повести на русский. Для архивирования предназначен [phantomjs](https://github.com/ariya/phantomjs)-скрипт `download-reddit-posts.js` в папке `phantomjs`. При запуске он создаёт список ссылок, содержащих в названии 'Curators' со страницы /u/localroger/submitted, после чего обрабатывает их (путём вставки содержания каждого поста в шаблон template.hmtl).
+Цель проекта — сделать постоянно обновляющийся перевод повести на русский. Для архивирования предназначен [SlimerJS](https://slimerjs.org/)-скрипт `download-reddit-posts.js` в папке `SlimerJS`. При запуске он создаёт список ссылок, содержащих в названии 'Curators' со страницы /u/localroger/submitted, после чего обрабатывает их (путём вставки содержания каждого поста в шаблон template.hmtl).
 
 ## Правки и предложения ##
 
@@ -16,4 +16,4 @@
 * [Роджеру Вильямсу](http://localroger.com/) и его чрезвычайно удовлетворительным произведениям. Поддержите автора на [Smashwords](https://www.smashwords.com/books/view/836390) 
 * Сервисам [ГлавРед](https://glvrd.ru/) и [TheRules.Ru](https://therules.ru/) за подспорье в выверении слога
 * [thebestmotherfuckingwebsite](https://github.com/denysvitali/thebestmotherfuckingwebsite) - шаблон веб-страниц сделан из их сайта
-* [phantomjs](https://github.com/ariya/phantomjs)
+* [SlimerJS](https://github.com/laurentj/slimerjs) и его предшественнику [phantomjs](https://github.com/ariya/phantomjs)
